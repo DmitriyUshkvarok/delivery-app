@@ -21,6 +21,7 @@ body {
   --box-shadow-header: 0px 2px 8px rgba(0, 0, 0, 0.2);
   --hover-color-text: #4e4376;
   --color-icon: #1a2980;
+  --text-shadow: 0px 0px 3px #000;
 }
 
 

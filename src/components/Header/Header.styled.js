@@ -1,4 +1,25 @@
 import styled from 'styled-components';
+import { GiFullPizza } from 'react-icons/gi';
+
+export const LogoContainer = styled.div`
+  margin-left: 30px;
+`;
+
+export const StyleGiFullPizza = styled(GiFullPizza)`
+  color: gold;
+  animation: rotate 5s infinite linear;
+  -webkit-animation: rotate 5s infinite linear;
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`;
 
 export const StyleHeader = styled.header`
   position: fixed;

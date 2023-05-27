@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { MdAddShoppingCart, MdRemoveShoppingCart } from 'react-icons/md';
+import { MdAddShoppingCart } from 'react-icons/md';
+import { RiCheckboxCircleLine } from 'react-icons/ri';
 
 export const HomePageTitle = styled.h1`
   margin-top: 130px;
@@ -11,6 +12,7 @@ export const HomePageTitle = styled.h1`
   text-transform: uppercase;
   margin-left: auto;
   margin-right: auto;
+  text-shadow: var(--text-shadow);
 `;
 
 export const FoodList = styled.ul`
@@ -51,14 +53,16 @@ export const InfoFoodWrapper = styled.div`
 export const FoodItemName = styled.h3`
   font-size: 14px;
   letter-spacing: 2px;
-  color: var(--color-title);
+  color: gold;
+  text-shadow: var(--text-shadow);
 `;
 
 export const FoodItemPrice = styled.span`
   margin-left: auto;
   display: block;
-  color: var(--color-icon);
+  color: aqua;
   font-weight: bold;
+  text-shadow: var(--text-shadow);
 `;
 
 export const ToggleOrder = styled.button`
@@ -79,7 +83,7 @@ export const StyleMdAddShoppingCart = styled(MdAddShoppingCart)`
   }
 `;
 
-export const StyleMdRemoveShoppingCart = styled(MdRemoveShoppingCart)`
+export const StyleOkCheck = styled(RiCheckboxCircleLine)`
   cursor: pointer;
   transition: fill var(--transition);
 

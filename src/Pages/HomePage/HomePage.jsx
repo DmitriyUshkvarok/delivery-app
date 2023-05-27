@@ -9,44 +9,43 @@ import {
   FoodItemPrice,
   ToggleOrder,
   StyleMdAddShoppingCart,
-  StyleMdRemoveShoppingCart,
+  StyleOkCheck,
 } from './HomePage.styled';
 import delivery from '../../DATA/delivery.json';
 import { toast } from 'react-toastify';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { firestore } from '../../firebase/config';
-import { collection, addDoc, deleteDoc, doc } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
 
 const HomePage = () => {
-  const [selectedItems, setSelectedItems] = useState({});
+  const [selectedItems, setSelectedItems] = useState(
+    JSON.parse(localStorage.getItem('selectedItems')) || []
+  );
   const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
+  }, [selectedItems]);
+
   const handleOrderToggleFood = async itemId => {
-    if (selectedItems[itemId]) {
-      await deleteProductFromDb(itemId);
-      const updatedSelectedItems = { ...selectedItems };
-      delete updatedSelectedItems[itemId];
-      setSelectedItems(updatedSelectedItems);
-    } else {
-      await addProductToDb(itemId);
-      setSelectedItems(prev => ({
-        ...prev,
-        [itemId]: true,
-      }));
+    if (selectedItems.includes(itemId)) {
+      return;
     }
+
+    await addProductToDb(itemId);
+    setSelectedItems(prev => [...prev, itemId]);
   };
 
-  const addProductToDb = async itemId => {
-    console.log('add', itemId);
+  const addProductToDb = async id => {
     try {
       setLoading(true);
-      const selectedItem = delivery.items.find(item => item.id === itemId);
+      const selectedItem = delivery.items.find(item => item.id === id);
       if (selectedItem) {
         await addDoc(collection(firestore, 'products'), {
-          id: itemId,
           name: selectedItem.name,
           price: selectedItem.price,
           image: selectedItem.image,
+          selected: true,
         });
         toast.success('Product added successfully');
       } else {
@@ -54,20 +53,6 @@ const HomePage = () => {
       }
     } catch (error) {
       toast.error('Error adding product to Firestore');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const deleteProductFromDb = async itemId => {
-    console.log('remove', itemId);
-    try {
-      setLoading(true);
-      const productReff = doc(firestore, 'products', itemId);
-      await deleteDoc(productReff);
-      toast.success('Product deleted successfully');
-    } catch (error) {
-      toast.error('Error deleting product from Firestore');
     } finally {
       setLoading(false);
     }
@@ -87,10 +72,10 @@ const HomePage = () => {
             </InfoFoodWrapper>
             <ToggleOrder
               onClick={() => handleOrderToggleFood(item.id)}
-              disabled={loading}
+              disabled={loading || selectedItems.includes(item.id)}
             >
-              {selectedItems[item.id] ? (
-                <StyleMdRemoveShoppingCart size={30} color="gold" />
+              {selectedItems.includes(item.id) ? (
+                <StyleOkCheck size={30} color="green" />
               ) : (
                 <StyleMdAddShoppingCart size={30} color="gold" />
               )}

@@ -25,4 +25,8 @@ export const StyleNavLink = styled(NavLink)`
   &:hover {
     color: var(--hover-color-text);
   }
+
+  &.active {
+    color: gold;
+  }
 `;
