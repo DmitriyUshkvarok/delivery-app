@@ -97,21 +97,49 @@ export const BasketPageList = styled.ul`
 export const BasketPageItem = styled.li`
   position: relative;
   display: flex;
-  align-items: center;
   gap: 5px;
   width: 100%;
-  max-width: 500px;
-  height: 100px;
+  max-width: 800px;
   box-shadow: var(--box-shadow-header);
   border-radius: var(--border-radius);
   padding: 5px;
 `;
 
 export const BasketPageItemImg = styled.img`
-  max-width: 100px;
+  max-width: 150px;
   height: 100%;
   object-fit: cover;
   border-radius: var(--border-radius);
+`;
+
+export const UserContactsInfo = styled.p`
+  font-size: 14px;
+  font-weight: 700;
+  color: gold;
+  text-shadow: var(--text-shadow);
+`;
+
+export const SpanUserTextInfo = styled.span`
+  font-size: 14px;
+  font-weight: 700;
+  color: aqua;
+  text-shadow: var(--text-shadow);
+`;
+
+export const UserContacts = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  margin-right: 50px;
+`;
+
+export const OrderInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  gap: 10px;
 `;
 
 export const BasketPageItemName = styled.p`
@@ -128,8 +156,14 @@ export const BasketPageItemPrice = styled.span`
   text-shadow: var(--text-shadow);
 `;
 
+export const BasketPageItemCountDate = styled.span`
+  font-size: 14px;
+  font-weight: 700;
+  color: gray;
+  text-shadow: var(--text-shadow);
+`;
+
 export const BasketPageItemCount = styled.span`
-  margin-left: 10px;
   color: var(--color-title);
   font-size: 14px;
   font-weight: 700;

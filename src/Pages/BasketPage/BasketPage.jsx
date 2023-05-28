@@ -14,16 +14,21 @@ import {
   NoProducts,
   BasketPageList,
   BasketPageItem,
+  UserContacts,
+  UserContactsInfo,
+  SpanUserTextInfo,
+  OrderInfoContainer,
   BasketPageItemName,
   BasketPageItemPrice,
   BasketPageItemCount,
+  BasketPageItemCountDate,
   BasketPageItemImg,
   BtnDeletedProduct,
   StyledTiDelete,
   StyleLoaderDeleting,
 } from './BasketPage.styled';
 
-const BasketPage = () => {
+const BasketPage = ({ orderCount }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -31,6 +36,7 @@ const BasketPage = () => {
 
   const navigate = useNavigate();
 
+  // получение списка продуктов заказа из базы данных
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -51,6 +57,7 @@ const BasketPage = () => {
     fetchProducts();
   }, []);
 
+  //общий подсчет сцуммы заказа
   const updateTotalPrice = productsList => {
     const total = productsList.reduce(
       (acc, product) => acc + product.price * product.count,
@@ -59,10 +66,12 @@ const BasketPage = () => {
     setTotalPrice(total);
   };
 
+  // навигация на предидущую страницу
   const handleBackPage = () => {
     navigate(-1);
   };
 
+  // удаления продукта из базы данных
   const deleteProductFromDb = async itemId => {
     try {
       setProductLoading(prevLoading => ({
@@ -79,6 +88,7 @@ const BasketPage = () => {
       );
       updateTotalPrice(products.filter(product => product.id !== itemId));
       localStorage.removeItem('selectedItems');
+      localStorage.removeItem('countItems');
     } catch (error) {
       toast.error('Error deleting product from Firestore');
     } finally {
@@ -93,7 +103,7 @@ const BasketPage = () => {
 
   return (
     <>
-      <Header />
+      <Header orderCount={orderCount} />
       <Container>
         <BasketPageTitle>Shopping cart</BasketPageTitle>
         <Link onClick={handleBackPage}>
@@ -122,15 +132,38 @@ const BasketPage = () => {
                       }
                       alt={product.name}
                     />
-                    <BasketPageItemName>
-                      name: {product.name}
-                    </BasketPageItemName>
-                    <BasketPageItemPrice>
-                      price: ${product.price}
-                    </BasketPageItemPrice>
-                    <BasketPageItemCount>
-                      Quantity:{product.count}
-                    </BasketPageItemCount>
+                    <UserContacts>
+                      <UserContactsInfo>
+                        <SpanUserTextInfo>Customer name:</SpanUserTextInfo>
+                        {product.userName}
+                      </UserContactsInfo>
+                      <UserContactsInfo>
+                        <SpanUserTextInfo>Email:</SpanUserTextInfo>
+                        {product.email}
+                      </UserContactsInfo>
+                      <UserContactsInfo>
+                        <SpanUserTextInfo>Phone:</SpanUserTextInfo>
+                        {product.number}
+                      </UserContactsInfo>
+                      <UserContactsInfo>
+                        <SpanUserTextInfo>Adress:</SpanUserTextInfo>
+                        {product.address}
+                      </UserContactsInfo>
+                    </UserContacts>
+                    <OrderInfoContainer>
+                      <BasketPageItemName>
+                        Product: {product.name}
+                      </BasketPageItemName>
+                      <BasketPageItemPrice>
+                        Price: ${product.price}
+                      </BasketPageItemPrice>
+                      <BasketPageItemCount>
+                        Quantity:{product.count}
+                      </BasketPageItemCount>
+                      <BasketPageItemCountDate>
+                        Date:{product.formatData}
+                      </BasketPageItemCountDate>
+                    </OrderInfoContainer>
                     <BtnDeletedProduct
                       onClick={() => deleteProductFromDb(product.id)}
                     >

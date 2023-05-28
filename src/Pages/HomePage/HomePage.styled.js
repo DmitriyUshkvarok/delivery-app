@@ -2,6 +2,62 @@ import styled from 'styled-components';
 import { MdAddShoppingCart } from 'react-icons/md';
 import { RiCheckboxCircleLine } from 'react-icons/ri';
 
+export const OrderForm = styled.form`
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+  box-shadow: var(--box-shadow-header);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: var(--border-radius);
+`;
+export const OrderFormTitle = styled.h2`
+  color: aqua;
+  font-weight: bold;
+  text-shadow: var(--text-shadow);
+  text-align: center;
+`;
+
+export const OrderFormGroup = styled.div`
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const InputName = styled.input`
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  padding: 5px;
+`;
+export const InputPhone = styled.input`
+  display: flex;
+  padding: 5px;
+  width: 100%;
+  /* max-width: 400px;  */
+`;
+export const InputEmail = styled.input`
+  display: flex;
+  padding: 5px;
+  width: 100%;
+  /* max-width: 400px;  */
+`;
+export const InputAdress = styled.input`
+  display: flex;
+  padding: 5px;
+  width: 100%;
+  /* width: 100%;
+  max-width: 400px; */
+`;
+
+export const HeaderWrapper = styled.div`
+  position: relative;
+`;
+
 export const HomePageTitle = styled.h1`
   margin-top: 130px;
   text-align: center;

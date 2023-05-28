@@ -18,6 +18,7 @@ export const NavigationItem = styled.li`
 `;
 
 export const StyleNavLink = styled(NavLink)`
+  position: relative;
   fill: var(--color-icon);
   color: var(--color-icon);
   transition: color var(--transition);
@@ -29,4 +30,21 @@ export const StyleNavLink = styled(NavLink)`
   &.active {
     color: gold;
   }
+`;
+
+export const StyeOrderCount = styled.p`
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: white;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: bold;
 `;

@@ -7,9 +7,10 @@ import {
   NavigationList,
   NavigationItem,
   StyleNavLink,
+  StyeOrderCount,
 } from './Navigation.styled';
 
-const Navigation = () => {
+const Navigation = ({ orderCount }) => {
   return (
     <Container>
       <StyleNavigation>
@@ -20,6 +21,7 @@ const Navigation = () => {
             </NavigationItem>
           </StyleNavLink>
           <StyleNavLink to="/basket-products">
+            <StyeOrderCount>{orderCount}</StyeOrderCount>
             <NavigationItem>
               <RiShoppingBasketFill size={50} />
             </NavigationItem>

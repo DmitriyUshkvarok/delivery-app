@@ -1,4 +1,5 @@
 import Navigation from 'components/Navigation/Navigation';
+import { Link } from 'react-router-dom';
 import {
   StyleHeader,
   NavigationContainer,
@@ -6,14 +7,16 @@ import {
   StyleGiFullPizza,
 } from './Header.styled';
 
-const Header = () => {
+const Header = ({ orderCount }) => {
   return (
     <StyleHeader>
       <LogoContainer>
-        <StyleGiFullPizza size={50}></StyleGiFullPizza>
+        <Link to="/">
+          <StyleGiFullPizza size={50}></StyleGiFullPizza>
+        </Link>
       </LogoContainer>
       <NavigationContainer>
-        <Navigation />
+        <Navigation orderCount={orderCount} />
       </NavigationContainer>
     </StyleHeader>
   );

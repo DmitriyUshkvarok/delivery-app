@@ -10,7 +10,7 @@ const BasketPage = lazy(() => import('../../Pages/BasketPage/BasketPage'));
 
 export const App = () => {
   return (
-    <div>
+    <>
       <ToastContainer />
       <Suspense
         fallback={
@@ -27,6 +27,6 @@ export const App = () => {
         </Routes>
       </Suspense>
       <Footer />
-    </div>
+    </>
   );
 };
