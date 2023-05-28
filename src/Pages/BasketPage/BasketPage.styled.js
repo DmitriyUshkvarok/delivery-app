@@ -1,6 +1,26 @@
 import styled from 'styled-components';
 import { IoChevronBackCircleSharp } from 'react-icons/io5';
 import { TiDelete } from 'react-icons/ti';
+import { GiFullPizza } from 'react-icons/gi';
+
+export const StyleGiFullPizza = styled(GiFullPizza)`
+  animation: scale 1s infinite linear;
+  -webkit-animation: scale 1s infinite linear;
+
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.5);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+`;
 
 export const StyleIoChevronBackCircleSharp = styled(IoChevronBackCircleSharp)`
   color: aqua;
@@ -32,12 +52,21 @@ export const ButtonBack = styled.button`
 `;
 
 export const BasketPageTitle = styled.h2`
+  max-width: 400px;
   margin-top: 110px;
   margin-bottom: 30px;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   display: flex;
   justify-content: center;
-  color: var(--color-title);
+  font-size: 37px;
+  letter-spacing: 1px;
+  color: aqua;
   text-shadow: var(--text-shadow);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-header);
 `;
 
 export const BasketPageSubTitle = styled.h3`
@@ -62,6 +91,7 @@ export const BasketPageList = styled.ul`
   align-items: flex-start;
   gap: 20px;
   margin-top: 30px;
+  margin-bottom: 90px;
 `;
 
 export const BasketPageItem = styled.li`
@@ -98,6 +128,14 @@ export const BasketPageItemPrice = styled.span`
   text-shadow: var(--text-shadow);
 `;
 
+export const BasketPageItemCount = styled.span`
+  margin-left: 10px;
+  color: var(--color-title);
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: var(--text-shadow);
+`;
+
 export const StyledTiDelete = styled(TiDelete)`
   color: red;
   width: 30px;
@@ -131,4 +169,14 @@ export const BtnDeletedProduct = styled.button`
       color: aqua;
     }
   }
+`;
+
+export const StyleLoaderDeleting = styled.p`
+  font-size: 25px;
+  font-weight: bold;
+  color: aqua;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(-50% -20px);
 `;

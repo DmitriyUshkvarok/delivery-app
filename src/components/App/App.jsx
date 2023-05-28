@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { StyleGiFoodTruck, LoaderWrapper } from './App.styled';
+import Footer from 'components/Footer/Footer';
 
 const HomePage = lazy(() => import('../../Pages/HomePage/HomePage'));
 const BasketPage = lazy(() => import('../../Pages/BasketPage/BasketPage'));
@@ -25,6 +26,7 @@ export const App = () => {
           <Route path="*" element={<HomePage />} />
         </Routes>
       </Suspense>
+      <Footer />
     </div>
   );
 };

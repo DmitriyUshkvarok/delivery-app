@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 import Container from 'components/Container/Container';
 import Header from 'components/Header/Header';
 import {
+  StyleGiFullPizza,
   ButtonBack,
   StyleIoChevronBackCircleSharp,
   BasketPageTitle,
@@ -15,15 +16,19 @@ import {
   BasketPageItem,
   BasketPageItemName,
   BasketPageItemPrice,
+  BasketPageItemCount,
   BasketPageItemImg,
   BtnDeletedProduct,
   StyledTiDelete,
+  StyleLoaderDeleting,
 } from './BasketPage.styled';
 
 const BasketPage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [productLoading, setProductLoading] = useState({});
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -47,7 +52,10 @@ const BasketPage = () => {
   }, []);
 
   const updateTotalPrice = productsList => {
-    const total = productsList.reduce((acc, product) => acc + product.price, 0);
+    const total = productsList.reduce(
+      (acc, product) => acc + product.price * product.count,
+      0
+    );
     setTotalPrice(total);
   };
 
@@ -56,8 +64,12 @@ const BasketPage = () => {
   };
 
   const deleteProductFromDb = async itemId => {
-    console.log(itemId);
     try {
+      setProductLoading(prevLoading => ({
+        ...prevLoading,
+        [itemId]: true,
+      }));
+
       const productDoc = doc(firestore, 'products', itemId);
       await deleteDoc(productDoc);
       toast.success('Product deleted successfully');
@@ -70,6 +82,11 @@ const BasketPage = () => {
     } catch (error) {
       toast.error('Error deleting product from Firestore');
     } finally {
+      setProductLoading(prevLoading => ({
+        ...prevLoading,
+        [itemId]: false,
+      }));
+
       setLoading(false);
     }
   };
@@ -85,11 +102,11 @@ const BasketPage = () => {
           </ButtonBack>
         </Link>
         {loading ? (
-          <div>Loading...</div> // Показать индикатор загрузки или блокировать элементы
+          <StyleGiFullPizza size={50} color="gold" />
         ) : (
           <>
             <BasketPageSubTitle>
-              Total price: ${totalPrice.toFixed(1)}
+              Total price: ${totalPrice.toFixed(2)}
             </BasketPageSubTitle>
             {products.length === 0 ? (
               <NoProducts>No products found.</NoProducts>
@@ -97,17 +114,31 @@ const BasketPage = () => {
               <BasketPageList>
                 {products.map(product => (
                   <BasketPageItem key={product.id}>
-                    <BasketPageItemImg src={product.image} alt={product.name} />
+                    <BasketPageItemImg
+                      src={
+                        product.image
+                          ? product.image
+                          : 'https://dummyimage.com/200x300/fff/aaa'
+                      }
+                      alt={product.name}
+                    />
                     <BasketPageItemName>
                       name: {product.name}
                     </BasketPageItemName>
                     <BasketPageItemPrice>
                       price: ${product.price}
                     </BasketPageItemPrice>
+                    <BasketPageItemCount>
+                      Quantity:{product.count}
+                    </BasketPageItemCount>
                     <BtnDeletedProduct
                       onClick={() => deleteProductFromDb(product.id)}
                     >
-                      <StyledTiDelete />
+                      {productLoading[product.id] ? (
+                        <StyleLoaderDeleting>Deleting...</StyleLoaderDeleting>
+                      ) : (
+                        <StyledTiDelete />
+                      )}
                     </BtnDeletedProduct>
                   </BasketPageItem>
                 ))}
