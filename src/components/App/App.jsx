@@ -15,7 +15,7 @@ export const App = () => {
       <Suspense
         fallback={
           <LoaderWrapper>
-            <StyleGiFoodTruck size={350} color="aqua" />
+            <StyleGiFoodTruck size={200} color="aqua" />
           </LoaderWrapper>
         }
       >

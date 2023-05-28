@@ -97,6 +97,7 @@ export const BasketPageList = styled.ul`
 export const BasketPageItem = styled.li`
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
   width: 100%;
   max-width: 800px;

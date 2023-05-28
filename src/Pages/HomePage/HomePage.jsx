@@ -47,13 +47,32 @@ const HomePage = () => {
     address: '',
   });
 
+  // запрос на получение общего количества товаров в корзине чтобы отобразить его на иконке корзинки в хедере
+  useEffect(() => {
+    const getCountOfOrders = async () => {
+      try {
+        const q = query(
+          collection(firestore, 'products'),
+          where('selected', '==', true)
+        );
+        const querySnapshot = await getDocs(q);
+        const count = querySnapshot.size;
+        setOrderCount(count);
+      } catch (error) {
+        console.error('Error getting count of orders:', error);
+        return 0;
+      }
+    };
+    getCountOfOrders();
+  }, []);
+
   useEffect(() => {
     localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
     localStorage.setItem('countItems', JSON.stringify(count));
   }, [selectedItems, count]);
 
   // смена иконки и блокировка иконки добавить продукт если не выбрано количество товара
-  const handleOrderToggleFood = async (itemId, formValues) => {
+  const handleOrderToggleFood = async itemId => {
     if (selectedItems.includes(itemId)) {
       return;
     }
@@ -123,23 +142,6 @@ const HomePage = () => {
       };
     });
   };
-
-  // запрос на получение общего количества товаров в корзине чтобы отобразить его на иконке корзинки в хедере
-  const getCountOfOrders = async () => {
-    try {
-      const q = query(
-        collection(firestore, 'products'),
-        where('selected', '==', true)
-      );
-      const querySnapshot = await getDocs(q);
-      const count = querySnapshot.size;
-      setOrderCount(count);
-    } catch (error) {
-      console.error('Error getting count of orders:', error);
-      return 0;
-    }
-  };
-  getCountOfOrders();
 
   // значения инпутов формы
   const handleInputChange = event => {
