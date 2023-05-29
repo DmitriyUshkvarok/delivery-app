@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const FilterList = styled.ul`
-  width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

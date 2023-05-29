@@ -21,6 +21,7 @@ import {
   BasketPageItemName,
   BasketPageItemPrice,
   BasketPageItemCount,
+  LogoRestaurant,
   BasketPageItemCountDate,
   BasketPageItemImg,
   BtnDeletedProduct,
@@ -166,6 +167,7 @@ const BasketPage = ({ orderCount }) => {
                       <BasketPageItemCountDate>
                         Date:{product.formatData}
                       </BasketPageItemCountDate>
+                      <LogoRestaurant src={product.logo} alt={product.store} />
                     </OrderInfoContainer>
                     <BtnDeletedProduct
                       onClick={() => deleteProductFromDb(product.id)}

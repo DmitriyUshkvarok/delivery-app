@@ -215,3 +215,11 @@ export const StyleLoaderDeleting = styled.p`
   right: 20px;
   transform: translate(-50% -20px);
 `;
+
+export const LogoRestaurant = styled.img`
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(-10px, -50%);
+  max-width: 30px;
+`;

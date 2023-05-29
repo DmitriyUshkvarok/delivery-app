@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 import { MdAddShoppingCart } from 'react-icons/md';
 import { RiCheckboxCircleLine } from 'react-icons/ri';
+import { SiBurgerking, SiKfc, SiMcdonalds } from 'react-icons/si';
 
 export const OrderForm = styled.form`
+  position: relative;
+  width: 100%;
   max-width: 450px;
   display: flex;
   flex-direction: column;
@@ -15,6 +18,7 @@ export const OrderForm = styled.form`
   margin-right: auto;
   border-radius: var(--border-radius);
 `;
+
 export const OrderFormTitle = styled.h2`
   color: aqua;
   font-weight: bold;
@@ -23,35 +27,91 @@ export const OrderFormTitle = styled.h2`
 `;
 
 export const OrderFormGroup = styled.div`
-  max-width: 400px;
+  max-width: 450px;
   display: flex;
   flex-direction: column;
+  box-shadow: var(--box-shadow-header);
 `;
 
 export const InputName = styled.input`
-  width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   display: flex;
   padding: 5px;
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  &:focus {
+    outline: 3px solid gold;
+  }
 `;
+
 export const InputPhone = styled.input`
   display: flex;
   padding: 5px;
-  width: 100%;
-  /* max-width: 400px;  */
+  max-width: 450px;
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  &:focus {
+    outline: 3px solid gold;
+  }
 `;
+
 export const InputEmail = styled.input`
   display: flex;
   padding: 5px;
-  width: 100%;
-  /* max-width: 400px;  */
+  max-width: 450px;
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  &:focus {
+    outline: 3px solid gold;
+  }
 `;
+
 export const InputAdress = styled.input`
   display: flex;
   padding: 5px;
-  width: 100%;
-  /* width: 100%;
-  max-width: 400px; */
+  max-width: 450px;
+  border-radius: var(--border-radius);
+  border: none;
+  outline: 3px solid gold;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  &:focus {
+    outline: 3px solid gold;
+  }
+`;
+
+export const StyleSiBurgerking = styled(SiBurgerking)`
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  color: orange;
+  opacity: 0.4;
+`;
+
+export const StyleSiKfc = styled(SiKfc)`
+  position: absolute;
+  bottom: 55px;
+  right: 40px;
+  color: lightcoral;
+  opacity: 0.4;
+`;
+
+export const StyleSiMcdonalds = styled(SiMcdonalds)`
+  position: absolute;
+  bottom: 25px;
+  left: 40px;
+  color: gold;
+  opacity: 0.4;
 `;
 
 export const HeaderWrapper = styled.div`
@@ -71,6 +131,7 @@ export const HomePageTitle = styled.h1`
   text-shadow: var(--text-shadow);
   border-radius: 10px;
   box-shadow: var(--box-shadow-header);
+  padding: 5px;
 `;
 
 export const FoodList = styled.ul`

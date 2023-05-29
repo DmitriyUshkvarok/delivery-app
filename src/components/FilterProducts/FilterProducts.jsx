@@ -1,4 +1,5 @@
 import { FilterList, FilterItem } from './FilterProducts.styleled';
+import Container from 'components/Container/Container';
 
 const FilterProducts = ({ onFilterChange }) => {
   const handleItemClick = storeName => {
@@ -10,7 +11,7 @@ const FilterProducts = ({ onFilterChange }) => {
   };
 
   return (
-    <div>
+    <Container>
       <FilterList>
         <FilterItem onClick={() => handleItemClick("McDonald's")}>
           McDonald's
@@ -29,7 +30,7 @@ const FilterProducts = ({ onFilterChange }) => {
         </FilterItem>
         <FilterItem onClick={handleShowAll}>Entire list</FilterItem>
       </FilterList>
-    </div>
+    </Container>
   );
 };
 

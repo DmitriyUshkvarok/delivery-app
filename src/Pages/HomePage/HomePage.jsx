@@ -1,4 +1,5 @@
 import Header from 'components/Header/Header';
+import Container from 'components/Container/Container';
 import FilterProducts from 'components/FilterProducts/FilterProducts';
 import {
   OrderForm,
@@ -8,6 +9,9 @@ import {
   InputPhone,
   InputEmail,
   InputAdress,
+  StyleSiBurgerking,
+  StyleSiKfc,
+  StyleSiMcdonalds,
   HeaderWrapper,
   HomePageTitle,
   FoodList,
@@ -115,6 +119,7 @@ const HomePage = () => {
           name: selectedItem.name,
           price: selectedItem.price,
           store: selectedItem.store,
+          logo: selectedItem.logo,
           image: selectedItem.image || 'https://dummyimage.com/200x300/fff/aaa',
           selected: true,
           count: count[id] || 0,
@@ -177,12 +182,15 @@ const HomePage = () => {
   };
 
   return (
-    <>
+    <Container>
       <HeaderWrapper>
         <Header orderCount={orderCount} />
       </HeaderWrapper>
       <HomePageTitle>Food delivery anywhere in the city</HomePageTitle>
       <OrderForm>
+        <StyleSiBurgerking size={50} />
+        <StyleSiKfc size={50} />
+        <StyleSiMcdonalds size={50} />
         <OrderFormTitle>Enter your information</OrderFormTitle>
         <OrderFormGroup>
           <InputName
@@ -298,7 +306,7 @@ const HomePage = () => {
           </FoodItem>
         ))}
       </FoodList>
-    </>
+    </Container>
   );
 };
 
