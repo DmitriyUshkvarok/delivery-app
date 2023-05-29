@@ -1,4 +1,5 @@
 import Header from 'components/Header/Header';
+import FilterProducts from 'components/FilterProducts/FilterProducts';
 import {
   OrderForm,
   OrderFormTitle,
@@ -46,7 +47,7 @@ const HomePage = () => {
     number: '',
     address: '',
   });
-
+  const [filteredItems, setFilteredItems] = useState(delivery.items);
   const isMounted = useRef(true);
 
   useEffect(() => {
@@ -113,6 +114,7 @@ const HomePage = () => {
         await addDoc(collection(firestore, 'products'), {
           name: selectedItem.name,
           price: selectedItem.price,
+          store: selectedItem.store,
           image: selectedItem.image || 'https://dummyimage.com/200x300/fff/aaa',
           selected: true,
           count: count[id] || 0,
@@ -161,6 +163,17 @@ const HomePage = () => {
       ...prevValues,
       [name]: value,
     }));
+  };
+
+  // Фильтрация товаров на основе выбранного магазина
+  const handleFilterChange = storeName => {
+    if (storeName === '') {
+      setFilteredItems(delivery.items);
+    } else {
+      const filtered = delivery.items.filter(item => item.store === storeName);
+      setFilteredItems(filtered);
+      setFilteredItems(filtered);
+    }
   };
 
   return (
@@ -216,8 +229,9 @@ const HomePage = () => {
           />
         </OrderFormGroup>
       </OrderForm>
+      <FilterProducts onFilterChange={handleFilterChange} />
       <FoodList>
-        {delivery.items.map(item => (
+        {filteredItems.map(item => (
           <FoodItem key={item.id}>
             <FoodItemImage
               src={

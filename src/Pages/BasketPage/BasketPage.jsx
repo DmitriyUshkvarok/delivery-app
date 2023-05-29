@@ -154,6 +154,9 @@ const BasketPage = ({ orderCount }) => {
                       <BasketPageItemName>
                         Product: {product.name}
                       </BasketPageItemName>
+                      <BasketPageItemCount>
+                        Restaurant chain:{product.store}
+                      </BasketPageItemCount>
                       <BasketPageItemPrice>
                         Price: ${product.price}
                       </BasketPageItemPrice>

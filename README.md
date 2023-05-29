@@ -15,6 +15,19 @@ selected quantity. If no quantity is selected, placing an order is not possible.
 The state of the add-to-cart icon and the selected quantity counter are stored
 in the local storage.
 
+Restaurant Selection Filter The application includes a restaurant selection
+filter, allowing users to choose a specific restaurant when ordering food. The
+filter enables users to browse and select from a list of available restaurants.
+
+Choose Entire List of Items In addition to the restaurant selection filter, the
+application provides a convenient button that allows users to choose the entire
+list of items from popular fast-food chains. The available options include:
+
+McDonald's KFC (Kentucky Fried Chicken) Burger King Domino's Pizza By clicking
+on the respective button, users can add the complete list of items from the
+chosen restaurant to their cart, making it easier to order a variety of products
+in one go.
+
 Cart Page The cart page displays cards with the selected items added by the
 user. Each card includes customer information entered during the order process,
 as well as the product name, price, and total quantity. If there are multiple

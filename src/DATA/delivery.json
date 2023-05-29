@@ -4,109 +4,337 @@
       "id": "1",
       "name": "Hamburger",
       "price": 2.99,
-      "image": "https://вкуснофф.рф/img/recepty/1758/big.jpg"
+      "image": "https://вкуснофф.рф/img/recepty/1758/big.jpg",
+      "store": "McDonald's"
     },
     {
       "id": "2",
       "name": "Cheeseburger",
       "price": 3.49,
-      "image": "https://i.obozrevatel.com/food/recipemain/2019/1/14/domashnij-chizburger-s-syrom.jpg?size=636x424"
+      "image": "https://i.obozrevatel.com/food/recipemain/2019/1/14/domashnij-chizburger-s-syrom.jpg?size=636x424",
+      "store": "McDonald's"
     },
     {
       "id": "3",
       "name": "French Fries",
       "price": 1.99,
-      "image": "https://img.delo-vcusa.ru/2023/02/kartoshka-fried-kak-v-mcdonalds.jpg"
+      "image": "https://img.delo-vcusa.ru/2023/02/kartoshka-fried-kak-v-mcdonalds.jpg",
+      "store": "McDonald's"
     },
     {
       "id": "4",
       "name": "Coca-Cola",
       "price": 1.49,
-      "image": "https://cdn5.vedomosti.ru/crop/image/2016/2b/9tuy/original-cq.jpg?height=609&width=1082"
+      "image": "https://cdn5.vedomosti.ru/crop/image/2016/2b/9tuy/original-cq.jpg?height=609&width=1082",
+      "store": "McDonald's"
     },
     {
       "id": "5",
       "name": "Caesar Salad",
       "price": 4.99,
-      "image": "https://ferma-m2.ru/images/shop/recipe_image/crop_shutterstock_1505620307.jpg"
+      "image": "https://ferma-m2.ru/images/shop/recipe_image/crop_shutterstock_1505620307.jpg",
+      "store": "McDonald's"
     },
     {
       "id": "6",
       "name": "Pepperoni Pizza",
       "price": 9.99,
-      "image": "https://insanelygoodrecipes.com/wp-content/uploads/2022/04/Homemade-Pizza-with-Pepperoni-and-Cheese.jpg"
+      "image": "https://insanelygoodrecipes.com/wp-content/uploads/2022/04/Homemade-Pizza-with-Pepperoni-and-Cheese.jpg",
+      "store": "McDonald's"
     },
     {
       "id": "7",
       "name": "Spaghetti Bolognese",
       "price": 7.99,
-      "image": "https://cdn1.ozonusercontent.com/s3/club-storage/images/article_image_1632x1000/685/f6d7c2eb-4616-4d99-bdf0-0d28b62f2dce.jpeg"
+      "image": "https://cdn1.ozonusercontent.com/s3/club-storage/images/article_image_1632x1000/685/f6d7c2eb-4616-4d99-bdf0-0d28b62f2dce.jpeg",
+      "store": "McDonald's"
     },
     {
       "id": "8",
       "name": "Tuna Sandwich",
       "price": 5.99,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG6Tt-glUkCa06i6aaJkDbLnypHrkd7scyDg&usqp=CAU"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG6Tt-glUkCa06i6aaJkDbLnypHrkd7scyDg&usqp=CAU",
+      "store": "McDonald's"
     },
     {
       "id": "9",
       "name": "Cheese Soup",
       "price": 3.99,
-      "image": "https://вкуснофф.рф/img/recepty/1296/big.jpg"
+      "image": "https://вкуснофф.рф/img/recepty/1296/big.jpg",
+      "store": "McDonald's"
     },
     {
       "id": "10",
       "name": "Salmon with Vegetables",
       "price": 12.99,
-      "image": "https://alimero.ru/uploads/images/18/23/66/2020/10/28/759933.jpg"
+      "image": "https://alimero.ru/uploads/images/18/23/66/2020/10/28/759933.jpg",
+      "store": "McDonald's"
     },
     {
       "id": "11",
       "name": "Fruit Salad",
       "price": 4.49,
-      "image": "https://shuba.life/static/content/thumbs/1200x630/1/25/n2qmgc---c1200x630x50px50p-c1200x630x50px50p-up--4aaf633ba8ec2b5fd0e8f3fe298a6251.jpg"
+      "image": "https://shuba.life/static/content/thumbs/1200x630/1/25/n2qmgc---c1200x630x50px50p-c1200x630x50px50p-up--4aaf633ba8ec2b5fd0e8f3fe298a6251.jpg",
+      "store": "McDonald's"
     },
     {
       "id": "12",
       "name": "Ice Cream in a Cup",
       "price": 2.49,
-      "image": "https://food.pibig.info/uploads/posts/2023-03/1678838908_food-pibig-info-p-morozhenoe-stakanchik-s-rozochkoi-krasivo-1.jpg"
+      "image": "https://food.pibig.info/uploads/posts/2023-03/1678838908_food-pibig-info-p-morozhenoe-stakanchik-s-rozochkoi-krasivo-1.jpg",
+      "store": "McDonald's"
     },
     {
       "id": "13",
       "name": "Chocolate Pudding",
       "price": 3.99,
-      "image": "https://lasunka.com/%D1%88%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%B4%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%83%D0%B4%D0%B8%D0%BD%D0%B3.png"
+      "image": "https://lasunka.com/%D1%88%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%B4%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%83%D0%B4%D0%B8%D0%BD%D0%B3.png",
+      "store": "McDonald's"
     },
     {
       "id": "14",
       "name": "Cappuccino",
       "price": 2.99,
-      "image": "https://i.obozrevatel.com/food/recipemain/2019/3/16/kapuchino.jpg?size=636x424"
+      "image": "https://i.obozrevatel.com/food/recipemain/2019/3/16/kapuchino.jpg?size=636x424",
+      "store": "McDonald's"
     },
     {
       "id": "15",
       "name": "Orange Fresh",
       "price": 3.49,
-      "image": "https://gotovim.uz/wp-content/uploads/2021/09/apelsinovyi-fresh-images-big.jpg"
+      "image": "https://gotovim.uz/wp-content/uploads/2021/09/apelsinovyi-fresh-images-big.jpg",
+      "store": "McDonald's"
     },
     {
       "id": "16",
       "name": "Apple Juice",
       "price": 2.49,
-      "image": "https://lifehacker.ru/wp-content/uploads/2019/08/Kak-zagotovit-yablochnyj-sok-na-zimu_1566425705.jpg"
+      "image": "https://lifehacker.ru/wp-content/uploads/2019/08/Kak-zagotovit-yablochnyj-sok-na-zimu_1566425705.jpg",
+      "store": "McDonald's"
     },
     {
       "id": "17",
       "name": "Hot Dog",
       "price": 3.99,
-      "image": "https://cdn.lifehacker.ru/wp-content/uploads/2021/09/shutterstock_1358686706_1632837058-scaled-e1632837130454.jpg"
+      "image": "https://cdn.lifehacker.ru/wp-content/uploads/2021/09/shutterstock_1358686706_1632837058-scaled-e1632837130454.jpg",
+      "store": "McDonald's"
     },
     {
       "id": "18",
       "name": "Borscht",
       "price": 3.37,
-      "image": "https://lifehacker.ru/wp-content/uploads/2014/12/ob-05_1568611223.jpg"
+      "image": "https://lifehacker.ru/wp-content/uploads/2014/12/ob-05_1568611223.jpg",
+      "store": "McDonald's"
+    },
+    {
+      "id": "19",
+      "name": "Colonel's Original Sandwich",
+      "price": 5.99,
+      "image": "https://i.ytimg.com/vi/g67JIdwc6e8/maxresdefault.jpg",
+      "store": "KFC"
+    },
+    {
+      "id": "20",
+      "name": "Famous Bowl",
+      "price": 4.99,
+      "image": "https://mma.prnewswire.com/media/1945324/KFC_Famous_Bowl.jpg?p=facebook",
+      "store": "KFC"
+    },
+    {
+      "id": "21",
+      "name": "Extra Crispy Tenders",
+      "price": 6.49,
+      "image": "https://hips.hearstapps.com/hmg-prod/images/kfc-sauce-1602099564.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*",
+      "store": "KFC"
+    },
+    {
+      "id": "22",
+      "name": "Mashed Potatoes",
+      "price": 2.99,
+      "image": "https://www.mashed.com/img/gallery/the-truth-about-kfcs-famous-mashed-potatoes/intro-1640031228.jpg",
+      "store": "KFC"
+    },
+    {
+      "id": "23",
+      "name": "Coleslaw",
+      "price": 1.99,
+      "image": "https://qph.cf2.quoracdn.net/main-qimg-d617742ea38a65c1dc13ec43b4d9ec62-lq",
+      "store": "KFC"
+    },
+    {
+      "id": "24",
+      "name": "Zinger Burger",
+      "price": 4.49,
+      "image": "https://globalprimenews.com/wp-content/uploads/2020/10/IMG-20201031-WA0004.jpg",
+      "store": "KFC"
+    },
+    {
+      "id": "25",
+      "name": "Popcorn Chicken",
+      "price": 3.99,
+      "image": "https://hips.hearstapps.com/hmg-prod/images/kfc-80-piece-popcorn-chicken-bucket-1583144503.png",
+      "store": "KFC"
+    },
+    {
+      "id": "26",
+      "name": "Twister Wrap",
+      "price": 5.49,
+      "image": "https://i.ytimg.com/vi/wUjVGnd9fbU/maxresdefault.jpg",
+      "store": "KFC"
+    },
+    {
+      "id": "27",
+      "name": "Krusher",
+      "price": 3.49,
+      "image": "https://assets.change.org/photos/2/su/yp/mgsUypmGyLoApEx-800x450-noPad.jpg?1635549470",
+      "store": "KFC"
+    },
+    {
+      "id": "28",
+      "name": "KFC Bucket",
+      "price": 19.99,
+      "image": "https://i2-prod.dailyrecord.co.uk/lifestyle/food-drink/article27578271.ece/ALTERNATES/s1200b/0_KFC-popcorn-chicken-bucket.png",
+      "store": "KFC"
+    },
+    {
+      "id": "29",
+      "name": "Italian BMT",
+      "price": 5.99,
+      "image": "https://www.subway.co.id/wp-content/uploads/2021/08/Thumbnail-_SANDWICH_Italian-B.M.T.jpg",
+      "store": "Subway"
+    },
+    {
+      "id": "30",
+      "name": "Subway Club",
+      "price": 6.49,
+      "image": "https://www.fastfoodpost.com/wp-content/uploads/2022/01/Subway-Introduces-New-Honey-Mustard-Rotisserie-Style-Chicken-Subway-Club-And-Baja-Turkey-Avocado-Sub-Sandwiches.jpg",
+      "store": "Subway"
+    },
+    {
+      "id": "31",
+      "name": "Turkey Breast",
+      "price": 4.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTIFJa37u8BzCeaEh57rdURq0hxuQd4DEPAg&usqp=CAU",
+      "store": "Subway"
+    },
+    {
+      "id": "32",
+      "name": "Veggie Delite",
+      "price": 4.49,
+      "image": "https://i.ytimg.com/vi/FcRebAMQkrQ/maxresdefault.jpg",
+      "store": "Subway"
+    },
+    {
+      "id": "33",
+      "name": "Chicken Teriyaki",
+      "price": 5.99,
+      "image": "https://www.subway.co.id/wp-content/uploads/2021/08/Thumbnail-_SANDWICH_chicken-teriyaki.jpg",
+      "store": "Subway"
+    },
+    {
+      "id": "34",
+      "name": "Tuna",
+      "price": 5.49,
+      "image": "https://i.insider.com/60eead9d61b8600019f16f6d?width=1200&format=jpeg",
+      "store": "Subway"
+    },
+    {
+      "id": "35",
+      "name": "Meatball Marinara",
+      "price": 4.99,
+      "image": "https://offtherecordblog2017.files.wordpress.com/2021/07/meatless-meatball-marinara-subway-artwork.jpg?w=1200",
+      "store": "Subway"
+    },
+    {
+      "id": "36",
+      "name": "Spicy Italian",
+      "price": 5.49,
+      "image": "https://www.subway.co.id/wp-content/uploads/2021/08/Thumbnail-_SANDWICH_spicy-italian.jpg",
+      "store": "Subway"
+    },
+    {
+      "id": "37",
+      "name": "Whopper",
+      "price": 6.99,
+      "image": "https://i.ytimg.com/vi/YRucEQuhbb8/maxresdefault.jpg",
+      "store": "Burger King"
+    },
+    {
+      "id": "38",
+      "name": "Cheeseburger",
+      "price": 4.49,
+      "image": "https://dixon.philly.com/wp-content/uploads/2018/10/03307-4-Philly-King-PR-Images.jpg",
+      "store": "Burger King"
+    },
+    {
+      "id": "39",
+      "name": "Chicken Royale",
+      "price": 5.99,
+      "image": "https://i.ytimg.com/vi/4ZY2x7LlPZ8/hqdefault.jpg",
+      "store": "Burger King"
+    },
+    {
+      "id": "40",
+      "name": "Double Whopper",
+      "price": 7.99,
+      "image": "https://www.fastfoodpost.com/wp-content/uploads/2021/12/Burger-King-Offers-Double-Whopper-Jr.-Sandwich-As-Part-Of-New-5-Your-Way-Meal.jpg",
+      "store": "Burger King"
+    },
+    {
+      "id": "41",
+      "name": "Bacon King",
+      "price": 8.49,
+      "image": "https://mms.businesswire.com/media/20161011005389/en/549054/5/Bacon_King_Sandwich_highres.jpg",
+      "store": "Burger King"
+    },
+    {
+      "id": "42",
+      "name": "Crispy Chicken Sandwich",
+      "price": 5.49,
+      "image": "https://hips.hearstapps.com/hmg-prod/images/hbc-with-bk-logo-1-1613514531.png",
+      "store": "Burger King"
+    },
+    {
+      "id": "43",
+      "name": "Pepperoni Pizza",
+      "price": 8.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLC5pYRDQJ-rnSxMUrBtV2qhzaF2_K9nSnov190knfvlbegugZyRk528LuRIprxjo8nNc&usqp=CAU",
+      "store": "Dominos Pizza"
+    },
+    {
+      "id": "44",
+      "name": "Margherita Pizza",
+      "price": 7.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVKuuXiO-tVyToI10Uq4EZ5zN7NcUVguBG-g&usqp=CAU",
+      "store": "Dominos Pizza"
+    },
+    {
+      "id": "45",
+      "name": "Hawaiian Pizza",
+      "price": 9.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-3qjEW3TH6T8T_KIkaBBgIGDXFpAJ1OEC7A&usqp=CAU",
+      "store": "Dominos Pizza"
+    },
+    {
+      "id": "46",
+      "name": "BBQ Chicken Pizza",
+      "price": 10.99,
+      "image": "https://recipes.net/wp-content/uploads/2020/03/copycat-dominos-memphis-BBQ-chicken-pizza-recipes.jpg",
+      "store": "Dominos Pizza"
+    },
+    {
+      "id": "47",
+      "name": "Supreme Pizza",
+      "price": 11.99,
+      "image": "https://www.southernliving.com/thmb/UuflED14dkNrrm-TFbkz42Z5mRg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/sl_supremepizza_00072-2000-4cab71bd67774233b45f05e4e32fdfde.jpg",
+      "store": "Dominos Pizza"
+    },
+    {
+      "id": "48",
+      "name": "Vegetarian Pizza",
+      "price": 8.49,
+      "image": "https://cdn.loveandlemons.com/wp-content/uploads/2023/02/vegetarian-pizza.jpg",
+      "store": "Dominos Pizza"
     }
   ]
 }

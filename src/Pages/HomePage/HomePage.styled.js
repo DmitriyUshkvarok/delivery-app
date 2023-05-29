@@ -175,6 +175,7 @@ export const BtnIncrement = styled.button`
   background-color: transparent;
   color: aqua;
   text-shadow: var(--text-shadow);
+  cursor: pointer;
 `;
 
 export const InputCounter = styled.input`
@@ -199,4 +200,5 @@ export const BtnDecrement = styled.button`
   background-color: transparent;
   color: aqua;
   text-shadow: var(--text-shadow);
+  cursor: pointer;
 `;
