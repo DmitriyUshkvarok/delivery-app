@@ -25,7 +25,7 @@ import {
 } from './HomePage.styled';
 import delivery from '../../DATA/delivery.json';
 import { toast } from 'react-toastify';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { firestore } from '../../firebase/config';
 import { collection, addDoc, query, getDocs, where } from 'firebase/firestore';
 import { format } from 'date-fns';
@@ -47,7 +47,8 @@ const HomePage = () => {
     address: '',
   });
 
-  // запрос на получение общего количества товаров в корзине чтобы отобразить его на иконке корзинки в хедере
+  const isMounted = useRef(true);
+
   useEffect(() => {
     const getCountOfOrders = async () => {
       try {
@@ -57,13 +58,23 @@ const HomePage = () => {
         );
         const querySnapshot = await getDocs(q);
         const count = querySnapshot.size;
+
         setOrderCount(count);
       } catch (error) {
         console.error('Error getting count of orders:', error);
-        return 0;
       }
     };
+
     getCountOfOrders();
+
+    const interval = setInterval(() => {
+      getCountOfOrders();
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+      isMounted.current = false;
+    };
   }, []);
 
   useEffect(() => {
