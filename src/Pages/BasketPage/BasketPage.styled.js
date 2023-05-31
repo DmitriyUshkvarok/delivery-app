@@ -83,7 +83,7 @@ export const NoProducts = styled.p`
 `;
 
 export const BasketPageList = styled.ul`
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -99,7 +99,7 @@ export const BasketPageItem = styled.li`
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  width: 100%;
+  /* width: 100%; */
   max-width: 800px;
   box-shadow: var(--box-shadow-header);
   border-radius: var(--border-radius);

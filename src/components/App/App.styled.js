@@ -7,6 +7,7 @@ export const LoaderWrapper = styled.div`
   right: 0;
   left: 0;
   bottom: 0;
+  z-index: 20;
   display: flex;
   justify-content: center;
   align-items: center;
