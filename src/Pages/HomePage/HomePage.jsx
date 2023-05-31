@@ -98,6 +98,16 @@ const HomePage = () => {
       return;
     }
 
+    if (
+      formValues.userName === '' ||
+      formValues.email === '' ||
+      formValues.number === '' ||
+      formValues.address === ''
+    ) {
+      toast.warning('Please fill in all contact fields');
+      return;
+    }
+
     await addProductToDb(itemId);
     setSelectedItems(prev => [...prev, itemId]);
   };
@@ -176,7 +186,6 @@ const HomePage = () => {
       setFilteredItems(delivery.items);
     } else {
       const filtered = delivery.items.filter(item => item.store === storeName);
-      setFilteredItems(filtered);
       setFilteredItems(filtered);
     }
   };

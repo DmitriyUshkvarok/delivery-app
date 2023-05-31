@@ -17,13 +17,13 @@ const Navigation = ({ orderCount }) => {
         <NavigationList>
           <StyleNavLink to="/">
             <NavigationItem>
-              <AiFillHome size={50} />
+              <AiFillHome size={40} />
             </NavigationItem>
           </StyleNavLink>
           <StyleNavLink to="/basket-products">
             <StyeOrderCount>{orderCount}</StyeOrderCount>
             <NavigationItem>
-              <RiShoppingBasketFill size={50} />
+              <RiShoppingBasketFill size={40} />
             </NavigationItem>
           </StyleNavLink>
         </NavigationList>

@@ -19,8 +19,8 @@ export const NavigationItem = styled.li`
 
 export const StyleNavLink = styled(NavLink)`
   position: relative;
-  fill: var(--color-icon);
-  color: var(--color-icon);
+  fill: aqua;
+  color: aqua;
   transition: color var(--transition);
 
   &:hover {

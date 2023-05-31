@@ -5,7 +5,7 @@ import { SiBurgerking, SiKfc, SiMcdonalds } from 'react-icons/si';
 
 export const OrderForm = styled.form`
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   max-width: 450px;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,7 @@ export const OrderForm = styled.form`
   margin-left: auto;
   margin-right: auto;
   border-radius: var(--border-radius);
+  background-color: rgba(255, 255, 255, 0.7);
 `;
 
 export const OrderFormTitle = styled.h2`
@@ -41,9 +42,15 @@ export const InputName = styled.input`
   border: none;
   outline: none;
   background-color: rgba(0, 0, 0, 0.2);
+  color: aqua;
 
   &:focus {
     outline: 3px solid gold;
+  }
+
+  &::placeholder {
+    color: aqua;
+    opacity: 0.7;
   }
 `;
 
@@ -55,6 +62,12 @@ export const InputPhone = styled.input`
   border: none;
   outline: none;
   background-color: rgba(0, 0, 0, 0.2);
+  color: aqua;
+
+  &::placeholder {
+    color: aqua;
+    opacity: 0.7;
+  }
 
   &:focus {
     outline: 3px solid gold;
@@ -69,6 +82,12 @@ export const InputEmail = styled.input`
   border: none;
   outline: none;
   background-color: rgba(0, 0, 0, 0.2);
+  color: aqua;
+
+  &::placeholder {
+    color: aqua;
+    opacity: 0.7;
+  }
 
   &:focus {
     outline: 3px solid gold;
@@ -84,6 +103,12 @@ export const InputAdress = styled.input`
   outline: 3px solid gold;
   outline: none;
   background-color: rgba(0, 0, 0, 0.2);
+  color: aqua;
+
+  &::placeholder {
+    color: aqua;
+    opacity: 0.7;
+  }
 
   &:focus {
     outline: 3px solid gold;
@@ -95,7 +120,7 @@ export const StyleSiBurgerking = styled(SiBurgerking)`
   top: 5px;
   left: 10px;
   color: orange;
-  opacity: 0.4;
+  opacity: 0.7;
 `;
 
 export const StyleSiKfc = styled(SiKfc)`
@@ -103,7 +128,7 @@ export const StyleSiKfc = styled(SiKfc)`
   bottom: 55px;
   right: 40px;
   color: lightcoral;
-  opacity: 0.4;
+  opacity: 0.7;
 `;
 
 export const StyleSiMcdonalds = styled(SiMcdonalds)`
@@ -111,7 +136,7 @@ export const StyleSiMcdonalds = styled(SiMcdonalds)`
   bottom: 25px;
   left: 40px;
   color: gold;
-  opacity: 0.4;
+  opacity: 0.7;
 `;
 
 export const HeaderWrapper = styled.div`

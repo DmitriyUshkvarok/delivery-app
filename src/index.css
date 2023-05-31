@@ -2,7 +2,11 @@
 /* bring in normalize.css styles */
 
 body {
-  background-image: var(--background-body);
+  background-image: url(./images/351.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -13,7 +17,7 @@ body {
 
 :root {
   --background-body: linear-gradient(to right, #1488cc, #2b32b2);
-  --background-header: linear-gradient(to right, #1a2980, #26d0ce);
+  --background-header: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(67, 67, 67, 0.7));
   --background-movies-item: linear-gradient(to right, #8360c3, #2ebf91);
   --color-title: #e65c00;
   --transition: 0.4s;

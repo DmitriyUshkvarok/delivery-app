@@ -104,6 +104,7 @@ export const BasketPageItem = styled.li`
   box-shadow: var(--box-shadow-header);
   border-radius: var(--border-radius);
   padding: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
 `;
 
 export const BasketPageItemImg = styled.img`
@@ -161,11 +162,11 @@ export const BasketPageItemCountDate = styled.span`
   font-size: 14px;
   font-weight: 700;
   color: gray;
-  text-shadow: var(--text-shadow);
+  text-shadow: 5px, 5px, 5px gray;
 `;
 
 export const BasketPageItemCount = styled.span`
-  color: var(--color-title);
+  color: aqua;
   font-size: 14px;
   font-weight: 700;
   text-shadow: var(--text-shadow);

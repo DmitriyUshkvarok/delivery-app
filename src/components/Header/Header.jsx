@@ -12,7 +12,7 @@ const Header = ({ orderCount }) => {
     <StyleHeader>
       <LogoContainer>
         <Link to="/">
-          <StyleGiFullPizza size={50}></StyleGiFullPizza>
+          <StyleGiFullPizza size={40}></StyleGiFullPizza>
         </Link>
       </LogoContainer>
       <NavigationContainer>

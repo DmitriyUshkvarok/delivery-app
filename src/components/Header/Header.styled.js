@@ -31,7 +31,7 @@ export const StyleHeader = styled.header`
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  height: 80px;
+  height: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
   background-image: var(--background-header);
